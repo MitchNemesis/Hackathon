@@ -1,9 +1,4 @@
-//
-//  HackathonApp.swift
-//  Hackathon
-//
-//  Created by CEDAM01 on 24/04/23.
-//
+/* HackathonApp.swift Created by BaymaxCoders on 24/04/23.*/
 
 import SwiftUI
 
