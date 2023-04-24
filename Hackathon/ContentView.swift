@@ -1,21 +1,17 @@
-//
-//  ContentView.swift
-//  Hackathon
-//
-//  Created by CEDAM01 on 24/04/23.
-//
+/* ContentView.swift Created by BaymaxCoders on 24/04/23.*/
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ZStack {
+            Image("Background")
+                .resizable()
+                .ignoresSafeArea(.all)
+            VStack {
+                Text("Hola")
+            }
         }
-        .padding()
     }
 }
 
