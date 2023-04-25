@@ -8,6 +8,7 @@ struct CameraPillView: View {
     // Variable de estado, se declara por primera vez aquí.
     @StateObject private var cameraViewModel = CameraModel()
     @StateObject private var speeaches = SpeechManager()
+    @StateObject var globalLogs = GlobalLog()
     
     /// El cuerpo de la vista principal contiene una etiqueta o bien, la imagen tomada, un botón de tomar fotografía y las etiquetas del texto detectado.
     var body: some View {
@@ -30,6 +31,8 @@ struct CameraPillView: View {
                             .padding(10)
                             .onAppear {
                                 speeaches.speak(recognizedText)
+                                let h = HistoryLog(readedText: recognizedText, date: Date(), image: "tarjeta 1")
+                                globalLogs.log.append(h)
                             }
                     }
                     
