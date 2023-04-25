@@ -20,13 +20,16 @@ struct CameraPillView: View {
                     .aspectRatio(contentMode: .fit)
                 // Texto que se va a leer.
                 if let recognizedText = cameraViewModel.recognizedText {
-                    Text("Medicamento: \(recognizedText)")
+                    Text("TEXTO: \(recognizedText)")
                         .font(.title3)
                         .multilineTextAlignment(.center)
                         .padding(10)
                         .onAppear {
                             speeaches.speak(recognizedText)
+                            var lec = Lectura(texto: recognizedText)
+                            lecturas.insert(lec, at: 0)
                         }
+                    
                 }
                 
                 Spacer() // - - -
