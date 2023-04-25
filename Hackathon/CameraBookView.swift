@@ -1,6 +1,7 @@
 /* CameraBookView.swift --> TextRecognition. Created by Miguel Torres on 25/04/23. */
 
 import SwiftUI
+import AVFoundation
 
 struct CameraBookView: View {
     
@@ -92,11 +93,11 @@ struct CameraBookView: View {
                         }
                     }
             }
-            .onDisappear {
-                speeaches.stop()
-            }
-            .navigationBarBackButtonHidden(true)
         }
+        .onDisappear {
+            speeaches.stop()
+        }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

@@ -3,12 +3,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject private var speeaches = SpeechManager()
+    
     var body: some View {
         TabView {
             // Primera pestaña
             HistoryView()
                 .tabItem {
                     Label("HISTORIAL", systemImage: "clock.fill")
+                }
+                .onDisappear() {
+                    speeaches.stop()
                 }
             // Segunda pestaña
             CameraPillView()

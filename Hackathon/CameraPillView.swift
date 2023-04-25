@@ -75,16 +75,16 @@ struct CameraPillView: View {
                 ImagePicker(sourceType: .camera, completionHandler: cameraViewModel.imagePickerCompletionHandler)
                     .onAppear {
                         speeaches.stop()
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                             speeaches.speak("Camara activada, presiona al centro en la parte inferior de la pantalla para tomar la foto")
                         }
                     }
             }
-            .onDisappear {
-                speeaches.stop()
-            }
-            .navigationBarBackButtonHidden(true)
         }
+        .onDisappear {
+            speeaches.stop()
+        }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
