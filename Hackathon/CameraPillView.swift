@@ -1,4 +1,4 @@
-/* CameraPillPreview.swift --> TextRecognition. Created by BaymaxCoders on 24/04/23. */
+/* CameraPillPreview.swift --> TextRecognition. Created by Miguel Torres on 24/04/23. */
 
 import SwiftUI
 import AVFoundation
@@ -7,6 +7,7 @@ struct CameraPillView: View {
     
     // Variable de estado, se declara por primera vez aquí.
     @StateObject private var cameraViewModel = CameraModel()
+    @StateObject private var speeaches = SpeechManager()
     
     /// El cuerpo de la vista principal contiene una etiqueta o bien, la imagen tomada, un botón de tomar fotografía y las etiquetas del texto detectado.
     var body: some View {
@@ -23,6 +24,9 @@ struct CameraPillView: View {
                         .font(.title3)
                         .multilineTextAlignment(.center)
                         .padding(10)
+                        .onAppear {
+                            speeaches.speak(recognizedText)
+                        }
                 }
                 
                 Spacer() // - - -
@@ -43,6 +47,11 @@ struct CameraPillView: View {
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.center)
                     .padding(20)
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                            speeaches.speak("Presiona al centro de la pantalla para activar la cámara y reconocer el texto de tu medicamento")
+                        }
+                    }
                 
                 Spacer() // - - -
                 
@@ -57,6 +66,18 @@ struct CameraPillView: View {
                         .padding(30)
                 }
             }
+        }
+        .sheet(isPresented: $cameraViewModel.isPresentingImagePicker) {
+            ImagePicker(sourceType: .camera, completionHandler: cameraViewModel.imagePickerCompletionHandler)
+                .onAppear {
+                    speeaches.stop()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                        speeaches.speak("Camara activada, presiona al centro en la parte inferior de la pantalla para tomar la foto")
+                    }
+                }
+        }
+        .onDisappear {
+            speeaches.stop()
         }
         .navigationBarBackButtonHidden(true)
     }
