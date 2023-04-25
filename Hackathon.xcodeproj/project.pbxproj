@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC438C2D29F847D6002AA2F8 /* CameraPillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC438C2C29F847D6002AA2F8 /* CameraPillView.swift */; };
+		BC438C2F29F8481D002AA2F8 /* CameraBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC438C2E29F8481D002AA2F8 /* CameraBookView.swift */; };
+		BC438C3129F84855002AA2F8 /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC438C3029F84855002AA2F8 /* CameraModel.swift */; };
 		BCFCD28529F7077900F4160C /* HackathonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFCD28429F7077900F4160C /* HackathonApp.swift */; };
 		BCFCD28729F7077900F4160C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFCD28629F7077900F4160C /* ContentView.swift */; };
 		BCFCD28929F7077A00F4160C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCFCD28829F7077A00F4160C /* Assets.xcassets */; };
@@ -14,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC438C2C29F847D6002AA2F8 /* CameraPillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPillView.swift; sourceTree = "<group>"; };
+		BC438C2E29F8481D002AA2F8 /* CameraBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraBookView.swift; sourceTree = "<group>"; };
+		BC438C3029F84855002AA2F8 /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
 		BCFCD28129F7077900F4160C /* Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCFCD28429F7077900F4160C /* HackathonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackathonApp.swift; sourceTree = "<group>"; };
 		BCFCD28629F7077900F4160C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +61,9 @@
 				BCFCD28629F7077900F4160C /* ContentView.swift */,
 				BCFCD28829F7077A00F4160C /* Assets.xcassets */,
 				BCFCD28A29F7077A00F4160C /* Preview Content */,
+				BC438C2C29F847D6002AA2F8 /* CameraPillView.swift */,
+				BC438C2E29F8481D002AA2F8 /* CameraBookView.swift */,
+				BC438C3029F84855002AA2F8 /* CameraModel.swift */,
 			);
 			path = Hackathon;
 			sourceTree = "<group>";
@@ -139,6 +148,9 @@
 			files = (
 				BCFCD28729F7077900F4160C /* ContentView.swift in Sources */,
 				BCFCD28529F7077900F4160C /* HackathonApp.swift in Sources */,
+				BC438C3129F84855002AA2F8 /* CameraModel.swift in Sources */,
+				BC438C2F29F8481D002AA2F8 /* CameraBookView.swift in Sources */,
+				BC438C2D29F847D6002AA2F8 /* CameraPillView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

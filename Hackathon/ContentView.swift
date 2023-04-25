@@ -2,17 +2,19 @@
 
 import SwiftUI
 
-//Aca hay un comentario
-
 struct ContentView: View {
     var body: some View {
-        ZStack {
-            Image("Background")
-                .resizable()
-                .ignoresSafeArea(.all)
-            VStack {
-                Text("Hola")
-            }
+        TabView {
+            // Primera pestaña
+            CameraPillView()
+                .tabItem {
+                    Label("IDENTIFICA TUS MEDICINAS", systemImage: "pills.fill")
+                }
+            // Segunda pestaña
+            //CameraBookView()
+                .tabItem {
+                    Label("Hola", systemImage: "pills.fill")
+                }
         }
     }
 }
