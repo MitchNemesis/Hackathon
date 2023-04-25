@@ -11,7 +11,7 @@ struct ContentView: View {
                     Label("IDENTIFICA TUS MEDICINAS", systemImage: "pills.fill")
                 }
             // Segunda pestaña
-            //CameraBookView()
+            CameraBookView()
                 .tabItem {
                     Label("Hola", systemImage: "pills.fill")
                 }
