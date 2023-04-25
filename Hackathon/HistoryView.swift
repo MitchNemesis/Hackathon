@@ -14,7 +14,6 @@ struct HistoryView: View {
     ]
     
     var body: some View {
-        Text("Hola")
         ZStack {
             VStack {
                 Text("Historial de capturas")
@@ -27,6 +26,7 @@ struct HistoryView: View {
                         HistoryFrame(readedText: historyLog.readedText, date: historyLog.date, background: historyLog.image)
                     }
                 }
+                Spacer()
             }
         }
     }

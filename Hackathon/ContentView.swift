@@ -6,14 +6,19 @@ struct ContentView: View {
     var body: some View {
         TabView {
             // Primera pestaña
-            CameraPillView()
+            HistoryView()
                 .tabItem {
-                    Label("IDENTIFICA TUS MEDICINAS", systemImage: "pills.fill")
+                    Label("HISTORIAL", systemImage: "clock.fill")
                 }
             // Segunda pestaña
+            CameraPillView()
+                .tabItem {
+                    Label("IDENTIFICA", systemImage: "pills.fill")
+                }
+            // Tercera pestaña
             CameraBookView()
                 .tabItem {
-                    Label("Hola", systemImage: "pills.fill")
+                    Label("LEE", systemImage: "book.circle")
                 }
         }
     }
