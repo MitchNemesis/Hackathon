@@ -12,25 +12,28 @@ struct HistoryFrame: View {
     
     var body: some View {
         ZStack {
-            Image("tarjeta 1")
+            Image(background)
                 .resizable()
                 .ignoresSafeArea(.all)
             HStack {
                 VStack {
                     Text(readedText)
-                        .font(.title)
+                        .font(.body)
                         .fontWeight(.semibold)
                         .multilineTextAlignment(.leading)
                         .foregroundColor(Color.white)
                     Text(date, style: .date)
-                        .font(.title)
+                        .font(.title2)
                         .fontWeight(.semibold)
                         .multilineTextAlignment(.leading)
                         .foregroundColor(Color.white)
                 }
                 // Botón para reproducir el texto leído del historial
                 Button {
-                    speeaches.speak(readedText)
+                    speeaches.stop()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                        speeaches.speak(readedText)
+                    }
                 } label: {
                     Image(systemName: "speaker.wave.2.circle.fill")
                         .font(.largeTitle)
@@ -38,6 +41,7 @@ struct HistoryFrame: View {
                         .foregroundColor(Color.white)
                 }
             }
+            .padding(40)
         }.frame(width: 450, height: 200)
     }
 }
