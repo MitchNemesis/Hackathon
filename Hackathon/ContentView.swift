@@ -5,11 +5,12 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject private var speeaches = SpeechManager()
+    @StateObject var globalLogs = GlobalLog()
     
     var body: some View {
         TabView {
             // Primera pestaña
-            HistoryView()
+            HistoryView().environmentObject(globalLogs)
                 .tabItem {
                     Label("HISTORIAL", systemImage: "clock.fill")
                 }
@@ -17,7 +18,7 @@ struct ContentView: View {
                     speeaches.stop()
                 }
             // Segunda pestaña
-            CameraPillView()
+            CameraPillView().environmentObject(globalLogs)
                 .tabItem {
                     Label("IDENTIFICA", systemImage: "pills.fill")
                 }
