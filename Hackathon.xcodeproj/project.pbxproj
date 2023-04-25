@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7DD27F1F29F84FD000118B9A /* HistoryFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD27F1E29F84FD000118B9A /* HistoryFrame.swift */; };
+		7DD27F2129F855AC00118B9A /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD27F2029F855AC00118B9A /* HistoryView.swift */; };
+		7DD27F2329F85DAB00118B9A /* HistoryLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD27F2229F85DAB00118B9A /* HistoryLog.swift */; };
 		BC438C2D29F847D6002AA2F8 /* CameraPillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC438C2C29F847D6002AA2F8 /* CameraPillView.swift */; };
 		BC438C2F29F8481D002AA2F8 /* CameraBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC438C2E29F8481D002AA2F8 /* CameraBookView.swift */; };
 		BC438C3129F84855002AA2F8 /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC438C3029F84855002AA2F8 /* CameraModel.swift */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7DD27F1E29F84FD000118B9A /* HistoryFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryFrame.swift; sourceTree = "<group>"; };
+		7DD27F2029F855AC00118B9A /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		7DD27F2229F85DAB00118B9A /* HistoryLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryLog.swift; sourceTree = "<group>"; };
 		BC438C2C29F847D6002AA2F8 /* CameraPillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPillView.swift; sourceTree = "<group>"; };
 		BC438C2E29F8481D002AA2F8 /* CameraBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraBookView.swift; sourceTree = "<group>"; };
 		BC438C3029F84855002AA2F8 /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
@@ -73,6 +79,9 @@
 				BC438C3229F854DE002AA2F8 /* ImagePicker.swift */,
 				BC438C3429F854F6002AA2F8 /* SpeechManager.swift */,
 				BC438C3629F8600C002AA2F8 /* lecturas.swift */,
+				7DD27F1E29F84FD000118B9A /* HistoryFrame.swift */,
+				7DD27F2029F855AC00118B9A /* HistoryView.swift */,
+				7DD27F2229F85DAB00118B9A /* HistoryLog.swift */,
 			);
 			path = Hackathon;
 			sourceTree = "<group>";
@@ -158,10 +167,13 @@
 				BCFCD28729F7077900F4160C /* ContentView.swift in Sources */,
 				BCFCD28529F7077900F4160C /* HackathonApp.swift in Sources */,
 				BC438C3129F84855002AA2F8 /* CameraModel.swift in Sources */,
+				7DD27F1F29F84FD000118B9A /* HistoryFrame.swift in Sources */,
 				BC438C3329F854DE002AA2F8 /* ImagePicker.swift in Sources */,
 				BC438C3729F8600C002AA2F8 /* lecturas.swift in Sources */,
 				BC438C2F29F8481D002AA2F8 /* CameraBookView.swift in Sources */,
+				7DD27F2129F855AC00118B9A /* HistoryView.swift in Sources */,
 				BC438C2D29F847D6002AA2F8 /* CameraPillView.swift in Sources */,
+				7DD27F2329F85DAB00118B9A /* HistoryLog.swift in Sources */,
 				BC438C3529F854F6002AA2F8 /* SpeechManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

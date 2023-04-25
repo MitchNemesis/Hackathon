@@ -1,4 +1,4 @@
-/* CameraBookView.swift --> TextRecognition. Created by BaymaxCoders on 24/04/23. */
+/* CameraBookView.swift --> TextRecognition. Created by Miguel Torres on 25/04/23. */
 
 import SwiftUI
 
@@ -6,6 +6,7 @@ struct CameraBookView: View {
     
     // Variable de estado, se declara por primera vez aquí.
     @StateObject private var cameraViewModel = CameraModel()
+    @StateObject private var speeaches = SpeechManager()
     
     /// El cuerpo de la vista principal contiene una etiqueta o bien, la imagen tomada, un botón de tomar fotografía y las etiquetas del texto detectado.
     var body: some View {
@@ -32,6 +33,12 @@ struct CameraBookView: View {
                         .font(.largeTitle)
                         .multilineTextAlignment(.center)
                         .padding(10)
+                        .onAppear {
+                            speeaches.speak(recognizedText)
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                                speeaches.speak("Presiona de nuevo para tomar la siguiente foto")
+                            }
+                        }
                 }
                 
                 Spacer() // - - -
@@ -52,6 +59,10 @@ struct CameraBookView: View {
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.center)
                     .padding(20)
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                            speeaches.speak("Presiona al centro, en la parte inferior de la pantalla para activar la cámara y escanear una página completa de un libro.")
+                        }
                     }
                 
                 Spacer() // - - -
@@ -68,6 +79,21 @@ struct CameraBookView: View {
                 }
             }
         }
+        .sheet(isPresented: $cameraViewModel.isPresentingImagePicker) {
+            ImagePicker(sourceType: .camera, completionHandler: cameraViewModel.imagePickerCompletionHandler)
+                .onAppear {
+                    speeaches.stop()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                        speeaches.speak("Camara activada, presiona al centro en la parte inferior de la pantalla para tomar la foto")
+                    }
+                }
+        }
+        .onDisappear {
+            speeaches.stop()
+        }
+        .navigationBarBackButtonHidden(true)
+    }
+    
 }
 
 struct CameraBookView_Previews: PreviewProvider {

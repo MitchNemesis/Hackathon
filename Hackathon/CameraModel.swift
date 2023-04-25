@@ -1,4 +1,4 @@
-/* CameraModel.swift --> TextRecognition. Created by Miguel Torres on 24/04/23. */
+/* CameraModel.swift --> TextRecognition. Created by BaymaxCoders on 24/04/23. */
 
 import SwiftUI
 import UIKit

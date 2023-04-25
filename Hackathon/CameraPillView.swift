@@ -1,4 +1,4 @@
-/* CameraPillPreview.swift --> TextRecognition. Created by Miguel Torres on 24/04/23. */
+/* CameraPillPreview.swift --> TextRecognition. Created by BaymaxCoders on 24/04/23. */
 
 import SwiftUI
 import AVFoundation
@@ -26,10 +26,7 @@ struct CameraPillView: View {
                         .padding(10)
                         .onAppear {
                             speeaches.speak(recognizedText)
-                            var lec = Lectura(texto: recognizedText)
-                            lecturas.insert(lec, at: 0)
                         }
-                    
                 }
                 
                 Spacer() // - - -

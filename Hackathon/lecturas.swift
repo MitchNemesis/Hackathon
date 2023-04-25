@@ -1,9 +1,4 @@
-//
-//  lecturas.swift
-//  Hackathon
-//
-//  Created by CEDAM01 on 25/04/23.
-//
+/* lecturas.swift --> Hackathon. Created by BaymaxCoders on 25/04/23. */
 
 import Foundation
 
